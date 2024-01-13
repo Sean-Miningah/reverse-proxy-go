@@ -1,0 +1,14 @@
+server:
+  host: "localhost"
+  listen_port: "8080"
+
+resources: 
+  - name: Server1
+    endpoint: /server1 
+    destination_url: "http://localhost:9001"
+  - name: Server2 
+    endpoint: /server2 
+    destination_url: "http://localhost:9002"
+  - name: Server3 
+    endpoint: /server3 
+    destination_url: "http://localhost:9003"
