@@ -16,7 +16,7 @@ func NewProxy(target *url.URL) *httputil.ReverseProxy {
 
 func ProxyRequestHandler(proxy *httputil.ReverseProxy, url *url.URL, endpoint string) func(http.ResponseWriter, *http.Request) {
 	return func(w http.ResponseWriter, r *http.Request) {
-		fmt.Printf("[ TinyRP ] Request received at %s at %s\n", r.URL, time.Now().UTC())
+		fmt.Printf("[ PROXY SERVER ] Request received at %s at %s\n", r.URL, time.Now().UTC())
 		// Update the headers to allow for SSL redirection
 		r.URL.Host = url.Host
 		r.URL.Scheme = url.Scheme
@@ -28,7 +28,7 @@ func ProxyRequestHandler(proxy *httputil.ReverseProxy, url *url.URL, endpoint st
 		r.URL.Path = strings.TrimLeft(path, endpoint)
 
 		// Note that ServeHttp is non blocking and uses a go routine under the hood
-		fmt.Printf("[ TinyRP ] Proxying request to %s at %s\n", r.URL, time.Now().UTC())
+		fmt.Printf("[ PROXY SERVER ]Proxying request to %s at %s\n", r.URL, time.Now().UTC())
 		proxy.ServeHTTP(w, r)
 	}
 }
