@@ -7,12 +7,12 @@ import (
 	"revers-proxy-learn/internal/configs"
 )
 
-// Run starts the server and listens on defined port
+// Run start the server on defined port
 func Run() error {
 	// load configurations from config file
 	config, err := configs.NewConfiguration()
 	if err != nil {
-		fmt.Errorf("could not load configurations: %v", err)
+		return fmt.Errorf("could not load configuration: %v", err)
 	}
 
 	// Creates a new router
