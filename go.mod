@@ -1,4 +1,4 @@
-module revers-proxy-learn
+module reverse-proxy-learn
 
 go 1.21.3
 
