@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"revers-proxy-learn/internal/server"
+	"reverse-proxy-learn/internal/server"
 )
 
 func main() {

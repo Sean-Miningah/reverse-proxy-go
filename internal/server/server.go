@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 	"net/url"
-	"revers-proxy-learn/internal/configs"
+	"reverse-proxy-learn/internal/configs"
 )
 
 // Run start the server on defined port
